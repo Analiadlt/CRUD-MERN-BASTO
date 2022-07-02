@@ -1,0 +1,16 @@
+.svg-icon {
+    height: 1.5 em;
+    width: auto;
+}
+
+.name {
+    display: flex;
+    font-size: xx-large;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+img{
+    display:flex;
+}

@@ -1,0 +1,14 @@
+#Test
+__tests__
+tests
+
+package-lock.json
+
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
