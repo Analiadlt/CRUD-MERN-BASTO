@@ -1,6 +1,6 @@
-# Bastó
+# CRUD - MERN
 
-Esta app consiste en un formulario CRUD (Altas, Bajas, Modificaciones) para los datos de vacas.
+Esta app consiste en un formulario CRUD (Altas, Bajas, Modificaciones y Eliminación) para los datos de animales.
 
 Tecnologías utilizadas:</br>
 ● React.js</br>

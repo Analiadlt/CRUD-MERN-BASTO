@@ -33,23 +33,23 @@ export default function Home() {
                     <thead>
                         <tr>
                             <th>ID SENASA </th>
-                            <th>Tipo Animal  </th>
-                            <th>Peso (kg)   </th>
-                            <th>Potrero   </th>
-                            <th>Dispositivo   </th>
-                            <th>N° Dispositivo   </th>
+                            <th>Type  </th>
+                            <th>Weigth (kg)   </th>
+                            <th>Paddock   </th>
+                            <th>Device        </th>
+                            <th>Device Number    </th>
                         </tr>
                     </thead>
                     <tbody>
                         {allAnimals?.map((animal, index) => {
                             return (
                                 <tr key={index}>
-                                    <td>{animal.senasa_id} </td>
-                                    <td>{animal.animal_tipo}  </td>
-                                    <td>{animal.peso_kg}  </td>
-                                    <td>{animal.potrero_nombre}  </td>
-                                    <td>{animal.dispositivo_tipo}  </td>
-                                    <td>{animal.dispositivo_nro}  </td>
+                                    <td>{animal.senasaId} </td>
+                                    <td>{animal.animalTipo}  </td>
+                                    <td>{animal.pesoKg}  </td>
+                                    <td>{animal.potreroNombre}  </td>
+                                    <td>{animal.dispositivoTipo}  </td>
+                                    <td>{animal.dispositivoNro}  </td>
                                     <td>
                                         <Link to={`/editAnimal/${animal._id}`}>
                                             <button>edit</button>

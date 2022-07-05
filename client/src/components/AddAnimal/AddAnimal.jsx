@@ -88,9 +88,6 @@ export default function AddAnimal() {
 						<label>Número de dispositivo:</label>
 						<input type='text' value={input.dispositivoNro} name='dispositivoNro' onChange={(e) => handleChange(e)} className={styles.inputData} />
 					</div>
-					{
-						console.log ('ERRORS ', errors)
-					}
 					<button type='submit' disabled={Object.keys(errors).length ? true : false} className={styles.button} onClick={(e) => handleSubmit(e)}>
 						Save Data
 					</button>

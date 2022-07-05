@@ -22,9 +22,10 @@ export default function EditAnimal() {
 
 	const [prevData, setData] = useState({});
 
-	let { senasa_id, animal_tipo, peso_kg, potrero_nombre, dispositivo_tipo, dispositivo_nro } = data;
-
+	let { senasaId, animalTipo, pesoKg, potreroNombre, dispositivoTipo, dispositivoNro } = data;
+	
 	function handleChange(e) {
+	
 		setData((prevData) => {
 			const newValues = {
 				...prevData,
@@ -54,47 +55,46 @@ export default function EditAnimal() {
 			</div>
 			<div className={styles.container}>
 				<h1>Edit Animal Data</h1>
-				{/* <form> */}
+		
 				<div>
 					<div className={styles.input}>
 						<label>ID SENASA:</label>
-						<input type='text' placeholder={senasa_id} className={styles.input_data} name='senasa_id' onChange={(e) => handleChange(e)} />
+						<input type='text' placeholder={senasaId} className={styles.input_data} name='senasaId' onChange={(e) => handleChange(e)} />
 					</div>
 					<div className={styles.input}>
 						<label>
-							Tipo de Animal:
-							<select name='animal_tipo' onChange={(e) => handleChange(e)} className={styles.input_data}>
-								<option placeholder="Novillo" selected={(animal_tipo === 'Novillo') ? true : false}>Novillo</option>
-								<option placeholder="Toro" selected={(animal_tipo === 'Toro') ? true : false}>Toro</option>
-								<option placeholder="Vaquillona" selected={(animal_tipo === 'Vaquillona') ? true : false}>Vaquillona</option>
+							Type:
+							<select name='animalTipo' onChange={(e) => handleChange(e)} className={styles.input_data}>
+								<option placeholder="Novillo" selected={(animalTipo === 'Novillo') ? true : false}>Novillo</option>
+								<option placeholder="Toro" selected={(animalTipo === 'Toro') ? true : false}>Toro</option>
+								<option placeholder="Vaquillona" selected={(animalTipo === 'Vaquillona') ? true : false}>Vaquillona</option>
 							</select>
 						</label>
 					</div>
 					<div className={styles.input}>
-						<label>Peso animal (kg):</label>
-						<input type='number' placeholder={peso_kg} name='peso_kg' onChange={(e) => handleChange(e)} className={styles.input_data} />
+						<label>Weigth (kg):</label>
+						<input type='number' placeholder={pesoKg} name='pesoKg' onChange={(e) => handleChange(e)} className={styles.input_data} />
 					</div>
 					<div className={styles.input}>
-						<label>Nombre de potrero:</label>
-						<input type='text' placeholder={potrero_nombre} name='potrero_nombre' onChange={(e) => handleChange(e)} className={styles.input_data} />
-						{errors.potrero_nombre && <p className={styles.errors}>{errors.name}</p>}
+						<label>Paddock name:</label>
+						<input type='text' placeholder={potreroNombre} name='potreroNombre' onChange={(e) => handleChange(e)} className={styles.input_data} />
+						{errors.potreroNombre && <p className={styles.errors}>{errors.name}</p>}
 					</div>
 					<div className={styles.input}>
 						<label>
-							Tipo de Dispositivo:
-							<select name='dispositivo_tipo' onChange={(e) => handleChange(e)} className={styles.input_data}>
-								<option placeholder="COLLAR" selected={(dispositivo_tipo === 'COLLAR') ? true : false}>COLLAR</option>
-								<option placeholder="CARAVANA" selected={(dispositivo_tipo === 'CARAVANA') ? true : false}>CARAVANA</option>
+							Device:
+							<select name='dispositivoTipo' onChange={(e) => handleChange(e)} className={styles.input_data}>
+								<option placeholder="COLLAR" selected={(dispositivoTipo === 'COLLAR') ? true : false}>COLLAR</option>
+								<option placeholder="CARAVANA" selected={(dispositivoTipo === 'CARAVANA') ? true : false}>CARAVANA</option>
 							</select>
 						</label>
 					</div>
 					<div className={styles.input}>
-						<label>Número de dispositivo:</label>
-						<input type='text' placeholder={dispositivo_nro} name='dispositivo_nro' onChange={(e) => handleChange(e)} className={styles.input_data} />
+						<label>Device Number:</label>
+						<input type='text' placeholder={dispositivoNro} name='dispositivoNro' onChange={(e) => handleChange(e)} className={styles.input_data} />
 						{errors.dispositivo_nro && <p className={styles.errors}>{errors.name}</p>}
 					</div>
 
-					{/* </form> */}
 				</div>
 				<>
 					<button type='submit' disabled={Object.keys(errors).length ? true : false} className={styles.button} onClick={(e) => handleSubmit(e)}>
