@@ -34,7 +34,7 @@ export default function Home() {
                         <tr>
                             <th>ID SENASA </th>
                             <th>Type  </th>
-                            <th>Weigth (kg)   </th>
+                            <th>Weight (kg)   </th>
                             <th>Paddock   </th>
                             <th>Device        </th>
                             <th>Device Number    </th>

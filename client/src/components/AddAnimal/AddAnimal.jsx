@@ -59,7 +59,7 @@ export default function AddAnimal() {
 					</div>
 					<div className={styles.input}>
 						<label>
-							Tipo de Animal:
+							Animal Type:
 							<select name='animalTipo' onChange={(e) => handleChange(e)} className={styles.inputData}>
 								<option value="Novillo">Novillo</option>
 								<option value="Toro">Toro</option>
@@ -68,16 +68,16 @@ export default function AddAnimal() {
 						</label>
 					</div>
 					<div className={styles.input}>
-						<label>Peso animal (kg):</label>
+						<label>Weight (kg):</label>
 						<input type='number' value={input.pesoKg} name='pesoKg' onChange={(e) => handleChange(e)} className={styles.inputData} />
 					</div>
 					<div className={styles.input}>
-						<label>Nombre de potrero:</label>
+						<label>Paddock name:</label>
 						<input type='text' value={input.potreroNombre} name='potreroNombre' onChange={(e) => handleChange(e)} className={styles.inputData} />
 					</div>
 					<div className={styles.input}>
 						<label>
-							Tipo de Dispositivo:
+							Device Type:
 							<select name='dispositivoTipo' onChange={(e) => handleChange(e)} className={styles.inputData}>
 								<option value="COLLAR">COLLAR</option>
 								<option value="CARAVANA">CARAVANA</option>
@@ -85,7 +85,7 @@ export default function AddAnimal() {
 						</label>
 					</div>
 					<div className={styles.input}>
-						<label>Número de dispositivo:</label>
+						<label>Device Number:</label>
 						<input type='text' value={input.dispositivoNro} name='dispositivoNro' onChange={(e) => handleChange(e)} className={styles.inputData} />
 					</div>
 					<button type='submit' disabled={Object.keys(errors).length ? true : false} className={styles.button} onClick={(e) => handleSubmit(e)}>

@@ -18,17 +18,21 @@ export default function EditAnimal() {
 
 	const data = useSelector((state) => state.animal);
 
+	console.log('DATA ', data)
+
 	const [errors, setErrors] = useState({});
 
-	const [prevData, setData] = useState({});
+	const [input, setInput] = useState(data);
+	
+	console.log('INPUT ', input)
 
 	let { senasaId, animalTipo, pesoKg, potreroNombre, dispositivoTipo, dispositivoNro } = data;
 	
 	function handleChange(e) {
 	
-		setData((prevData) => {
+		setInput((input) => {
 			const newValues = {
-				...prevData,
+				...input,
 				[e.target.name]: e.target.value
 			}
 
@@ -40,11 +44,11 @@ export default function EditAnimal() {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		dispatch(saveAnimal({ prevData, id }));
+		dispatch(saveAnimal({ input, id }));
 
 		alert('Data saved.');
 
-		setData(prevData);
+		setInput(input);
 		navigate('/');
 	}
 
@@ -59,11 +63,11 @@ export default function EditAnimal() {
 				<div>
 					<div className={styles.input}>
 						<label>ID SENASA:</label>
-						<input type='text' placeholder={senasaId} className={styles.input_data} name='senasaId' onChange={(e) => handleChange(e)} />
+						<input type='text' value={senasaId} className={styles.input_data} name='senasaId' onChange={(e) => handleChange(e)} />
 					</div>
 					<div className={styles.input}>
 						<label>
-							Type:
+							Animal Type:
 							<select name='animalTipo' onChange={(e) => handleChange(e)} className={styles.input_data}>
 								<option placeholder="Novillo" selected={(animalTipo === 'Novillo') ? true : false}>Novillo</option>
 								<option placeholder="Toro" selected={(animalTipo === 'Toro') ? true : false}>Toro</option>
@@ -72,7 +76,7 @@ export default function EditAnimal() {
 						</label>
 					</div>
 					<div className={styles.input}>
-						<label>Weigth (kg):</label>
+						<label>Weight (kg):</label>
 						<input type='number' placeholder={pesoKg} name='pesoKg' onChange={(e) => handleChange(e)} className={styles.input_data} />
 					</div>
 					<div className={styles.input}>
