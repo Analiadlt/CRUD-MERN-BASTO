@@ -53,7 +53,7 @@ export default function AddAnimal() {
 				<Link to='/'>Home</Link>
 			</div>
 			<div className={styles.container}>
-				<h1>Carga de un nuevo animal</h1>
+				<h1>Load a New Animal</h1>
 				<form onSubmit={(e) => handleSubmit(e)}>
 					<div className={styles.input}>
 						<label>ID SENASA:</label>

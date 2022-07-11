@@ -5,7 +5,7 @@ import { getAnimals, deleteAnimal } from '../../redux/action/indexAction';
 import { Link } from 'react-router-dom';
 import store from '../../redux/store/store';
 import styles from './AllAnimal.module.css';
-
+import { confirm } from "react-confirm-box";
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -16,13 +16,22 @@ export default function Home() {
         store.dispatch(getAnimals());
     }, [dispatch])
 
-    function deleteClick(id) {
-        // e.preventDefault();
+    // function deleteClick(id) {
+    //     // e.preventDefault();
 
-        if (window.confirm("Do you really want to delete animal?")) {
+    //     if (window.confirm("Do you really want to delete animal?")) {
+    //         dispatch(deleteAnimal(id));
+    //     }
+    // }
+
+    function deleteClick(id) {
+       
+        const result = confirm("Do you really want to delete animal?");
+        if (result) {
             dispatch(deleteAnimal(id));
         }
     }
+
     return (
         <div className={styles.tabla}>
             <div>
