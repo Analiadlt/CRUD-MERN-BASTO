@@ -39,7 +39,7 @@ export default function EditAnimal() {
 				...newInput,
 				[e.target.name]: e.target.value
 			}
-			console.log('NEW values ', newValues)
+
 			if (e.target.name !== 'animalTipo' && e.target.name !== 'dispositivoTipo')
 				setErrors(validate(newValues));
 
@@ -74,9 +74,6 @@ export default function EditAnimal() {
 						<label>
 							Animal Type:
 							<select name='animalTipo' onChange={(e) => handleChange(e)} className={styles.input_data}>
-								{/* <option placeholder="Novillo" selected={(input.animalTipo === 'Novillo') ? true : false}>Novillo</option>
-								<option placeholder="Toro" selected={(input.animalTipo === 'Toro') ? true : false}>Toro</option>
-								<option placeholder="Vaquillona" selected={(input.animalTipo === 'Vaquillona') ? true : false}>Vaquillona</option> */}
 								<option selected={(input.animalTipo === 'Novillo') ? true : false}>Novillo</option>
 								<option selected={(input.animalTipo === 'Toro') ? true : false}>Toro</option>
 								<option selected={(input.animalTipo === 'Vaquillona') ? true : false}>Vaquillona</option>

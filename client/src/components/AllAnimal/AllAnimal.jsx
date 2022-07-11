@@ -12,9 +12,6 @@ export default function Home() {
 
     const allAnimals = useSelector((state) => state.allAnimals);
 
-    // Can still subscribe to the store
-    // store.subscribe(() => console.log(store.getState()));
-
     useEffect(() => {
         store.dispatch(getAnimals());
     }, [dispatch])

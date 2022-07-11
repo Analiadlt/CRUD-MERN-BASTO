@@ -9,7 +9,7 @@ import styles from './AddAnimal.module.css';
 export default function AddAnimal() {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	
+
 	const [errors, setErrors] = useState({});
 
 	const newInput = {
@@ -39,10 +39,12 @@ export default function AddAnimal() {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		dispatch(addAnimal(input));
-		alert('Data saved.');
-		setInput(newInput)
-		navigate('/');
+		if (input.senasaId !== '' && input.pesoKg !== 0 && input.potreroNombre !== '' && input.dispositivoNro !== '') {
+			dispatch(addAnimal(input));
+			alert('Data saved.');
+			setInput(newInput)
+			navigate('/');
+		}
 	}
 
 	return (
