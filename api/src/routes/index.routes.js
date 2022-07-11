@@ -51,7 +51,7 @@ router.get('/edit/:id', async (req, res) => {
 router.put('/edit', async (req, res) => {
 
   const id = req.body.id;
-  const data = req.body.prevData;
+  const data = req.body.newInput;
 
   try {
     if (id && data) {

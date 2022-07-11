@@ -2,7 +2,7 @@ export function validate(input) {
 	let errors = {}
 	console.log('INPUT ', input)
  try {
-	if (!input.senasaId.trim() || input.senasaId.length !== 16) {
+	if (input.senasaId && input.senasaId.length !== 16) {
 		errors.name = 'ID SENASA must be a 16-character alphanumeric string.'
 	}
 
@@ -18,7 +18,7 @@ export function validate(input) {
 		errors.name = 'Paddock Name must be a string';
 	}
 } catch {
-	errors.name ='You must enter all values ​​correctly.'
+	errors.name ='You must enter all values correctly.';
 }
 	return errors;
 }
