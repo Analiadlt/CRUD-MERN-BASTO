@@ -5,7 +5,8 @@ import { getAnimals, deleteAnimal } from '../../redux/action/indexAction';
 import { Link } from 'react-router-dom';
 import store from '../../redux/store/store';
 import styles from './AllAnimal.module.css';
-import { confirm } from "react-confirm-box";
+// import editBtn from '../../img/edit_btn.jpg';
+// import deleteBtn from '../../img/delete_btn.jpg';
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -16,21 +17,13 @@ export default function Home() {
         store.dispatch(getAnimals());
     }, [dispatch])
 
-    // function deleteClick(id) {
-    //     // e.preventDefault();
-
-    //     if (window.confirm("Do you really want to delete animal?")) {
-    //         dispatch(deleteAnimal(id));
-    //     }
-    // }
-
     function deleteClick(id) {
-       
-        const result = confirm("Do you really want to delete animal?");
-        if (result) {
+
+        if (window.confirm("Do you really want to delete animal?")) {
             dispatch(deleteAnimal(id));
         }
     }
+
 
     return (
         <div className={styles.tabla}>
@@ -58,13 +51,12 @@ export default function Home() {
                                     <td>{animal.dispositivoNro}  </td>
                                     <td>
                                         <Link to={`/editAnimal/${animal._id}`}>
-                                            <button>edit</button>
+                                            <button className={styles.boton}>edit</button>
+                                            {/* <td><img src={editBtn} alt="icono edit" /></td> */}
                                         </Link>
                                     </td>
-                                    <td><button onClick={e => { return deleteClick(animal._id) }}>delete</button></td>
-                                    {/* <td>
-                            <img className="svg-icon" src="./assets/svg/edit.svg" alt="icono de edición"/>
-                        </td> */}
+                                    <td><button className={styles.boton} onClick={() => { return deleteClick(animal._id) }}>delete</button></td>
+                                    {/* <td><img src={deleteBtn} alt="icono delete" /></td> */}
                                 </tr>
                             );
                         })}

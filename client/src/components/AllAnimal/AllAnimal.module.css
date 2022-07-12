@@ -18,3 +18,14 @@ th{
     border-bottom: 1px solid green;
     border-width: 0.1rem;
 }
+
+.boton{
+    font-size:10px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:white;
+    background:#638cb5;
+    border:0px;
+    width:80px;
+    height:19px;
+   }
