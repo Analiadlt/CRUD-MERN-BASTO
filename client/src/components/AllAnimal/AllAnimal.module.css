@@ -1,31 +1,51 @@
 table {
-    display: "flex";
-    justify-content: "flex-end";
-    margin-top: "150px";
-    margin-right: "500px";
-    color: black;
+    width: 90%;
+    border-collapse: collapse;
+    margin: 3rem;
     font-family: sans-serif;
-    /* border-collapse: collapse; */
-    margin: auto;
 }
 
+th,
 td {
-    padding: 0.3rem;
+    border: solid 1px #eee;
+    padding: 5px;
 }
 
-th{
+th {
+    background-color: tomato;
+    color: white;
+    text-align: center;
     padding: 0.5rem;
-    border-bottom: 1px solid green;
-    border-width: 0.1rem;
 }
 
-.boton{
-    font-size:10px;
-    font-family:Verdana,Helvetica;
-    font-weight:bold;
-    color:white;
-    background:#638cb5;
-    border:0px;
-    width:80px;
-    height:19px;
-   }
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+tr:hover{
+    background-color: #aaa;
+}
+
+.specialBoton {
+  border: none;
+  width: 0;
+}
+
+.boton {
+    font-size: 16px;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 99px;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    box-shadow: 0px 3px 0 grey;
+}
+
+#IoPencil {
+    background-color: rgb(58, 226, 58);
+}
+
+#IoTrash {
+    background-color: rgb(245, 69, 69);
+}

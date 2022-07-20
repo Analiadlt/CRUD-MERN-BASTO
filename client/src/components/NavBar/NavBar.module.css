@@ -1,16 +1,32 @@
-.svg-icon {
-    height: 1.5 em;
-    width: auto;
+.navBar {
+    height: 150px;
+    display: flex;
+    justify-content: center;
 }
 
 .name {
-    display: flex;
     font-size: xx-large;
     font-family: sans-serif;
     font-weight: bold;
     color: black;
+    position: absolute;
+    left: 50rem;
+    top: 5rem;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
-img{
-    display:flex;
+.navBar {
+    height: 150px;
+    position: relative;
+    border: 0.1rem;
+    border-style: solid;
+}
+
+div img {
+    position: absolute;
+    left: 20rem;
+    top: 5rem;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }

@@ -5,7 +5,7 @@ import { getAnimals, deleteAnimal } from '../../redux/action/indexAction';
 import { Link } from 'react-router-dom';
 import store from '../../redux/store/store';
 import styles from './AllAnimal.module.css';
-// import editBtn from '../../img/edit_btn.jpg';
+import { IoTrash, IoPencil } from 'react-icons/io5';
 // import deleteBtn from '../../img/delete_btn.jpg';
 
 export default function Home() {
@@ -49,14 +49,12 @@ export default function Home() {
                                     <td>{animal.potreroNombre}  </td>
                                     <td>{animal.dispositivoTipo}  </td>
                                     <td>{animal.dispositivoNro}  </td>
-                                    <td>
+                                    <td className={styles.specialBoton}>
                                         <Link to={`/editAnimal/${animal._id}`}>
-                                            <button className={styles.boton}>edit</button>
-                                            {/* <td><img src={editBtn} alt="icono edit" /></td> */}
+                                            <button className={styles.boton} id={styles.IoPencil} title='Edit'><IoPencil /></button>
                                         </Link>
                                     </td>
-                                    <td><button className={styles.boton} onClick={() => { return deleteClick(animal._id) }}>delete</button></td>
-                                    {/* <td><img src={deleteBtn} alt="icono delete" /></td> */}
+                                    <td className={styles.specialBoton}><button className={styles.boton} id={styles.IoTrash} title='Delete' onClick={() => { return deleteClick(animal._id) }}><IoTrash /></button></td>
                                 </tr>
                             );
                         })}

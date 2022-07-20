@@ -7,9 +7,9 @@ import AllAnimal from '../AllAnimal/AllAnimal';
 export default function Home() {
 
 	return (
-		<div className="App">
+		<div className={styles.home}>
 			<>
-				<Link to='/addAnimal'>
+				<Link to='/addAnimal' className={styles.link}>
 					<button className={styles.boton}>Load a new animal</button>
 				</Link>
 			</>
