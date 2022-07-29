@@ -45,5 +45,3 @@ Los datos de los animales a guardar son:</br>
 ● Número de dispositivo. (Alfanumerico 8 caracteres)</br>
 
 En el formularios de alta y modificación se validan los campos ID SENASA y Número de dispositivo.
-
-![image](https://user-images.githubusercontent.com/87041305/181301731-ecd7c3f0-bec1-4b80-bf7b-a528138e05e3.png)
