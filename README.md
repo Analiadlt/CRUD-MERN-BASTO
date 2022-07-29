@@ -46,4 +46,3 @@ Los datos de los animales a guardar son:</br>
 
 En el formularios de alta y modificación se validan los campos ID SENASA y Número de dispositivo.
 
-image.png
