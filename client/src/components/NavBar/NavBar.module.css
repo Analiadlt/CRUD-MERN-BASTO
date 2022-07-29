@@ -9,8 +9,8 @@
     font-family: sans-serif;
     font-weight: bold;
     color: black;
-    position: absolute;
-    left: 50rem;
+    position: relative;
+    right: 40rem;
     top: 5rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -18,14 +18,16 @@
 
 .navBar {
     height: 150px;
+    width: 100rem;
     position: relative;
     border: 0.1rem;
     border-style: solid;
+    background-color: rgb(233, 233, 229);
 }
 
 div img {
     position: absolute;
-    left: 20rem;
+    right: 0rem;
     top: 5rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);

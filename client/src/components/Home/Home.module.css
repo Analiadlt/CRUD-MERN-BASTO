@@ -1,5 +1,16 @@
 .home {
     padding: 1em;
+} 
+
+.name {
+    font-size: xx-large;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    top: 5rem;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 .boton {
@@ -21,3 +32,4 @@ button:hover {
 .link {
     text-decoration: none;
 }
+

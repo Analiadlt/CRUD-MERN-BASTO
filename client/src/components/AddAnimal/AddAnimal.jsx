@@ -31,7 +31,6 @@ export default function AddAnimal() {
 			}
 
 			setErrors(validate(newValues));
-
 			return newValues;
 		});
 	};
